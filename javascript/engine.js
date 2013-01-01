@@ -6,15 +6,17 @@ engine.repro2 = document.getElementById('repro2');
 engine.canvas = document.getElementById('canvas');
 engine.handle = engine.canvas.getContext('2d');
 
+//AQUI SE REPRODUCEN TODOS LOS SONIDOS....
+
 engine.efecto = function(topo)
-{
+{ 
 	switch(topo)
 	{
 		case 1: 	
-		 	//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Narracion1.mp3"> </audio>';
+		 	engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
 			break;
 		case 2:
-			engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArenaDER.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArena.mp3"> </audio>';
 			break;				
 	}	
 };
@@ -24,11 +26,13 @@ engine.fondo = function(caiman)
 	switch(caiman)
 	{
 		case 1:
-		engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
+		engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
 		break;
 	}
 };
 
+
+//HASTA AQUI...
 
 engine.draw = function()
 {
@@ -53,7 +57,6 @@ engine.setMap = function(mapData)
 };
 
 
-//engine.handle.translate(0, 8);
 
 engine.start = function(mapData, x, y)
 {

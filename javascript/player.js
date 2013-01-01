@@ -6,6 +6,9 @@ engine.player.spriteIndex = 6;
 
 engine.player.leftLeg = false;
 
+var yourlife = 100;
+var yourpower = 100;
+
 engine.player.store = function(index, imgSrc)
 {
 	var sprite = [new Image(), false];
@@ -15,7 +18,7 @@ engine.player.store = function(index, imgSrc)
 	{
 		sprite[1] = true;
 	}
-
+ 
 	engine.player.sprite[index] = sprite;
 };
 
@@ -208,4 +211,21 @@ engine.player.activate = function()
 	{
 		engine.script.call[engine.currentMap[y][x].onactivate]();
 	}
+};
+
+engine.player.stats = function(atacado)
+{
+   //Si es 1, atacas, se baja el power.
+   //Si es 2, te atacan, se baja el life.
+	switch(atacado)
+	{
+		case 1: yourpower = yourpower - 5;  
+		break;
+
+		case 2: yourlife = yourlife - 10;
+		break;
+	}
+  
+  document.getElementById('player').innerHTML =("Vida: "+yourlife+" %" + "\n\nEnergia: "+yourpower+" %");
+
 };

@@ -9,7 +9,12 @@
 	
     <div id = "repro1"></div>
     <div id = "repro2"></div>
-    <div id = "repro3"></div>
+
+    Enemigo: <span id = "enemigo1"></span><br/>  
+    Jugador: <span id = "player"></span><br/>
+    Estado:  <span id = "estado"></span><br/>
+
+
 	
     <canvas id= "canvas" width= "144" height= "144">
 	Navegador viejo. No puedes ejecutar canvas.
@@ -21,10 +26,14 @@
   <script src = "javascript/map.js"></script>
   <script src = "javascript/screen.js"></script>
   <script src = "javascript/viewport.js"></script>
-  <script src = "javascript/tile.js"></script>
+  <script src = "javascript/tile.js"></script> 
+  <script src = "javascript/enemy.js"></script>
+
+
 
 
 <script>
+//Desierto
 var mapone =
 [
    [
@@ -42,7 +51,7 @@ var mapone =
     {ground:1, item:2}
    ],
    
-   [
+   [ 
     {ground:1, item:2}, 
     {ground:1}, 
     {ground:1}, 
@@ -170,16 +179,16 @@ var mapone =
    ],
    [
     {ground:1, item:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
-    {ground:1, onenter:2}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
     {ground:1, item:2}
    ],
    [
@@ -225,133 +234,35 @@ var mapone =
     {ground:1, item:2}
    ]
 ];
-
+//Zona de Combate
 var maptwo =
 [
    [
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},   
     {ground:5, item:2}
    ],
    [
     {ground:5, item:2}, 
     {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
+    {ground:5},
     {ground:5}, 
     {ground:5, item:2}
    ],
    [
     {ground:5, item:2}, 
     {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
+    {ground:5, item:2, onactivate:2},//enemy
     {ground:5}, 
     {ground:5, item:2}
    ],
    [
-    {ground:5, item:2}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5,item:6,onactivate:2}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5, item:2}
-   ],
-   [
-    {ground:5, item:2}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5, item:2}
-   ],
-   [
-    {ground:5, item:2}, 
-    {ground:5}, 
-    {ground:5, item:4, onenter:1}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5, item:2}
-   ],
-   [
-    {ground:5, item:2}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5, item:2}
-   ],
-   [
-    {ground:5, item:2}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5}, 
-    {ground:5, item:2}
-   ],
-   [
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
-    {ground:5, item:2}, 
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},  
     {ground:5, item:2}
    ]
 ];
@@ -365,5 +276,6 @@ var maptwo =
 
 </script>
 
+    
 </body>
 </html>
