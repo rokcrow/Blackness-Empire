@@ -8,6 +8,11 @@ engine.player.leftLeg = false;
 
 var yourlife = 100;
 var yourpower = 100;
+var playerlevel = 1;
+var playerexp = 0;
+var ELA = 2;//Enemy Life Attack
+var CPA;//Character Power Attack
+
 
 engine.player.store = function(index, imgSrc)
 {
@@ -101,7 +106,7 @@ engine.player.move = function(direction)
 	   engine.currentMap[toY][toX] &&
 	   engine.currentMap[toY][toX].item &&
 	   (engine.currentMap[toY][toX].item == 2 ||
-	   engine.currentMap[toY][toX].item == 6))
+	   engine.currentMap[toY][toX].item == 7))
 	{
 		engine.keyboard.canInput = true;
 	}
@@ -213,16 +218,27 @@ engine.player.activate = function()
 	}
 };
 
+
+
 engine.player.stats = function(atacado)
 {
+
+
+	switch (playerlevel)
+	{
+		case 1: CPA = 3; break;
+	}
+
    //Si es 1, atacas, se baja el power.
    //Si es 2, te atacan, se baja el life.
+
+
 	switch(atacado)
 	{
-		case 1: yourpower = yourpower - 5;  
+		case 1: yourpower = yourpower - CPA; 
 		break;
 
-		case 2: yourlife = yourlife - 10;
+		case 2: yourlife = yourlife - ELA;
 		break;
 	}
   

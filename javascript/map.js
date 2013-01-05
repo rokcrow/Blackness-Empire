@@ -24,3 +24,4 @@ engine.map.draw = function()
 		}
 	}
 };
+

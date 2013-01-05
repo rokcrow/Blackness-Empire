@@ -13,10 +13,10 @@ engine.efecto = function(topo)
 	switch(topo)
 	{
 		case 1: 	
-		 	engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
+		 	//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
 			break;
 		case 2:
-			engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArena.mp3"> </audio>';
+			//engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArena.mp3"> </audio>';
 			break;				
 	}	
 };
@@ -26,7 +26,7 @@ engine.fondo = function(caiman)
 	switch(caiman)
 	{
 		case 1:
-		engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
+		//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
 		break;
 	}
 };
@@ -58,7 +58,7 @@ engine.setMap = function(mapData)
 
 
 
-engine.start = function(mapData, x, y)
+engine.start = function(mapData, x, y, tucan)
 {
 	
 	engine.viewport.x = x;
@@ -70,7 +70,9 @@ engine.start = function(mapData, x, y)
 	engine.tile.store(3, 'imagenes/ladderdown.png');
 	engine.tile.store(4, 'imagenes/ladderup.png');
 	engine.tile.store(5, 'imagenes/cave.png');
-	engine.tile.store(6, 'imagenes/sign.png');
+	engine.tile.store(6, 'imagenes/sign.png');	
+	engine.tile.store(7, 'imagenes/enemy.png');
+
  
 	engine.setMap(mapData);
 

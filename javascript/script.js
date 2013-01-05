@@ -2,20 +2,27 @@ engine.script = {};
 
 engine.script.call = [];
 
-var topo;
+var topo, comadreja;
+
+comadreja = 0;
 
 engine.script.call[0] = function()//CAMPO DE BATALLA
 {
-	engine.setMap(maptwo);
-	engine.viewport.x = -2;
-	engine.viewport.y = -3;
-	engine.player.spriteIndex = 6;
+	if (comadreja < 1) 
+	{
+		engine.setMap(maptwo);
+		engine.viewport.x = -2;
+		engine.viewport.y = -3;
+		engine.player.spriteIndex = 6;
 
-	engine.draw();
+		engine.draw(); 
 
-	//LLAMA AL SONIDO DE FONDO	
-	caiman = 1;
-	engine.fondo(caiman);
+		//LLAMA AL SONIDO DE FONDO	
+		caiman = 1;
+		engine.fondo(caiman);
+	}
+	
+	comadreja = 1;
 };
 
 engine.script.call[1] = function()
