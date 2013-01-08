@@ -46,7 +46,7 @@ engine.keyboard.parseInput = function(event)
 			case engine.keyboard.getValue('space'):
 				engine.player.activate();
 				break;
-		}
+		} 
 
 		engine.draw();
 	}

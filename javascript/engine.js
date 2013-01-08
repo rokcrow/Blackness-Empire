@@ -7,10 +7,9 @@ engine.canvas = document.getElementById('canvas');
 engine.handle = engine.canvas.getContext('2d');
 
 //AQUI SE REPRODUCEN TODOS LOS SONIDOS....
-
 engine.efecto = function(topo)
 { 
-	switch(topo)
+	switch(topo) 
 	{
 		case 1: 	
 		 	//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
@@ -33,6 +32,16 @@ engine.fondo = function(caiman)
 
 
 //HASTA AQUI...
+
+
+engine.animalia = function(topo)
+{
+	if(engine.player.spriteIndex == 6)
+	{
+		alert(topo);
+	}
+	
+};
 
 engine.draw = function()
 {
