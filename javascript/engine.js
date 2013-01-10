@@ -34,14 +34,6 @@ engine.fondo = function(caiman)
 //HASTA AQUI...
 
 
-engine.animalia = function(topo)
-{
-	if(engine.player.spriteIndex == 6)
-	{
-		alert(topo);
-	}
-	
-};
 
 engine.draw = function()
 {

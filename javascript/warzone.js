@@ -13,6 +13,8 @@ var ELD = 10; //Enemy Life Damage
 var EPA = 5; //Enemy Power Attack
 
 var hitornot;
+var enemydead = 0;
+
 
 engine.warzone.stats = function(EUA)
 {
@@ -74,7 +76,28 @@ engine.warzone.stats = function(EUA)
 	  if(enemylife == 0)
 		{   
 	 		document.getElementById('estado').innerHTML =("Enemigo destruido");
-		    setTimeout(engine.start(mapone, 3, 3) ,3000); //Envia al personaje a un nuevo mapa
+		    
+		    enemydead++;
+
+	 		switch(enemydead)
+	 		{
+	 			case 1:
+				    setTimeout(function(){engine.start(mapone, 3, 3);}, 3000); //Envia al personaje a un nuevo mapa
+				break;
+
+				case 2:
+				    setTimeout(function(){engine.start(mapthree, 2, -1);}, 3000); //Envia al personaje a un nuevo mapa
+				break;
+
+				case 3:
+				    setTimeout(function(){engine.start(mapsix, 1, 2);}, 3000); //Envia al personaje a un nuevo mapa
+				break;
+
+				case 4:
+				    setTimeout(function(){engine.start(mapsix, 1, 4);}, 3000);
+				break;
+			}
+
 		    enemylife = 100;
 		    enemypower = 100;
 	        document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");	

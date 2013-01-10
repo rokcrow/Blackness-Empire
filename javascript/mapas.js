@@ -2,7 +2,7 @@
 var tucan;
 
 
-tucan = 20;   
+tucan = 0;   
 
 
 var mapone =
@@ -246,9 +246,9 @@ var mapthree =
     {ground:1, item:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
+    {ground:1, item:6, onactivate:5}, 
+    {ground:1, item:6, onactivate:5}, 
+    {ground:1, item:6, onactivate:5}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1, item:2}, 
@@ -299,28 +299,14 @@ var mapthree =
    ],
    [
     {ground:1, item:2}, 
+    {ground:1, item:3, onenter:8},//npc que habla 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1, item:2}
-   ],
-   [
-    {ground:1, item:2}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-        {ground:5, onenter:3}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-        {ground:5, onenter:3}, 
+    {ground:1},  
     {ground:1}, 
     {ground:1}, 
     {ground:1, item:2}
@@ -330,11 +316,11 @@ var mapthree =
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
+    {ground:1}, 
+        {ground:5, onenter:3}, 
         {ground:5, onenter:3}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1}, 
-        {ground:5, onenter:3}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1, item:2}
@@ -344,11 +330,25 @@ var mapthree =
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
+    {ground:1}, 
         {ground:5, onenter:3}, 
         {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
-        {ground:5, onenter:3}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1, item:2}
+   ],
+   [
+    {ground:1, item:2}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1, item:2}
@@ -401,7 +401,7 @@ var mapthree =
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1}, 
+    {ground:1},   
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -411,11 +411,11 @@ var mapthree =
    ],
    [
     {ground:1, item:2}, 
+    {ground:3, onenter:7}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
+    {ground:1},  
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -653,15 +653,15 @@ var mapfive =
    ],
    [
     {ground:5, item:2}, 
-    {ground:1, onenter:5}, //envia a zona de combate
-    {ground:1, onenter:5}, //envia a zona de combate
-    {ground:1, onenter:5}, //envia a zona de combate
-    {ground:3, onenter:6}, //envia a zona de combate
-    {ground:3, onenter:6},//envia a zona de combate
-    {ground:3, onenter:6},//envia a zona de combate
-    {ground:6, onenter:7}, //envia a zona de combate
-    {ground:6, onenter:7},//envia a zona de combate
-    {ground:6, onenter:7}, //envia a zona de combate
+    {ground:1, onenter:50}, //envia a zona de combate
+    {ground:1, onenter:50}, //envia a zona de combate
+    {ground:1, onenter:50}, //envia a zona de combate
+    {ground:3, onenter:60}, //envia a zona de combate
+    {ground:3, onenter:60},//envia a zona de combate
+    {ground:3, onenter:60},//envia a zona de combate
+    {ground:6, onenter:70}, //envia a zona de combate
+    {ground:6, onenter:70},//envia a zona de combate
+    {ground:6, onenter:70}, //envia a zona de combate
     {ground:5, item:2}
    ],
    [
@@ -679,6 +679,253 @@ var mapfive =
    ]
 ];
 
+var mapsix = //Mercado
+[
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},   
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:1, onenter:9}, 
+    {ground:1, onenter:9},
+    {ground:1, onenter:9}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:1, onenter:9}, 
+    {ground:1, onenter:9},
+    {ground:1, onenter:9},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:7, onactivate:11},//adhara
+    {ground:1, onenter:10}, 
+    {ground:1, onenter:10},
+    {ground:1, onenter:10}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},  
+    {ground:5, item:2}
+   ]
+];
+
+var mapseven =  //Multitud
+[
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},   
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5, item:7, onactivate:6},//npc que habla 
+    {ground:5}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},  
+    {ground:5, item:2}
+   ]
+];
 
 	  window.addEventListener('load', function()
       {//Posicion Inicial del personaje en Mapaone

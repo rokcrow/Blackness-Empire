@@ -103,7 +103,8 @@ engine.player.move = function(direction)
 	   engine.currentMap[toY][toX] &&
 	   engine.currentMap[toY][toX].item &&
 	   (engine.currentMap[toY][toX].item == 2 ||
-	   engine.currentMap[toY][toX].item == 7))
+	   engine.currentMap[toY][toX].item == 7 ||
+	   engine.currentMap[toY][toX].item == 6))
 	{
 		engine.keyboard.canInput = true;
 	}
