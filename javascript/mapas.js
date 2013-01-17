@@ -212,16 +212,16 @@ var maptwo = //WARZONE
    ],
    [
     {ground:5, item:2}, 
-    {ground:5}, 
+    {ground:5, item:2}, 
     {ground:5},
-    {ground:5}, 
+    {ground:5, item:2}, 
     {ground:5, item:2}
    ],
    [
     {ground:5, item:2}, 
-    {ground:5}, 
+    {ground:5, item:2}, 
     {ground:5, item:7, onactivate:1},//enemy
-    {ground:5}, 
+    {ground:5, item:2}, 
     {ground:5, item:2}
    ],
    [
@@ -1099,5 +1099,29 @@ var mapeight =  //FORNAX
 	window.addEventListener('keydown', engine.keyboard.parseInput, false);
 //-3-3
 
+/*
+setTimeout(
+            function()
+            {
+                cactus = 1
+                engine.repro1.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
+            
+
+                    if(cactus == 1)
+                    {
+                        setTimeout(
+                        function()
+                        { 
+                        engine.repro1.innerHTML = '<audio autoplay> <source src = "test1.mp3"> </audio>';
+                        },3000);
+                    }
+
+            },3000);
 
 
+        break;
+
+        
+    }
+};
+*/

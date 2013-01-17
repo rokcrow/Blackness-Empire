@@ -18,6 +18,8 @@ var enemydeads = 0;
 var lifecharge;
 var diaryparts = 0; 
 
+var ataca, aux, abeja;
+
 
 /***** 
 NOMBRE: stats
@@ -61,11 +63,24 @@ engine.warzone.stats = function(EUA, heal)
 			 {
 			 	if(hitornot == 1)
 			 	{
-  				  document.getElementById('estado').innerHTML =("ENEMIGO ATACADO\n");
+			 		//HAS ATACADO
+			 	ataca = 6;
+
+				engine.storyteller(ataca);
 
 			 	  enemylife = enemylife - enemydamage;//Se reduce Enemy Life
 
-			  	  document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");
+
+				
+				  aux = 7;
+				  //EL ENEMIGO AHORA TIENE
+				  setTimeout(function()
+				{
+					engine.storyteller(aux);
+				},10000);
+				  
+				  
+				  document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");
 
 				  userpower = userpower - userpowerattack;//Se reduce userpowerattack
 			 	

@@ -12,6 +12,7 @@ var salvadhara;
 var heal = 0;
 var church = 0;
 var monocerotis = 0;
+var ardilla;
 
 var cofre1, cofre2 = 1, cofre3;
 
@@ -30,9 +31,23 @@ engine.script.call[0] = function()
 
 		engine.draw(); 
 
-		//LLAMA AL SONIDO DE FONDO	
-		caiman = 1;
-		engine.fondo(caiman);
+		//ENEMIGO SALVAJE HA APARECIDO	
+		caiman = 5;
+		engine.storyteller(caiman);
+		/*if(caiman == 5)
+		{   //VOZ DE ENEMY
+			ardilla = 6;
+			engine.storyteller(ardilla);
+
+			if(ardilla == 6)
+			{	//STAT DEL ENEMY
+				gato = 7;
+		    	engine.storyteller(ardilla);
+
+			}
+		}*/
+		
+
 	}
 	
 	comadreja = 1;

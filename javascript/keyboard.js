@@ -5,6 +5,8 @@ engine.keyboard.canInput = false;
 
 var topo = 2;
 var activar;
+var north, south, east, west;
+var ataca;
 /***** 
 NOMBRE: getValue
 DESCRIPCIÓN: permite obtener un valor ingresado por teclado
@@ -40,18 +42,26 @@ engine.keyboard.parseInput = function(event)
 		{
 			case engine.keyboard.getValue('up'):
 				engine.player.move('up');
+				north = 1;
+				engine.storyteller(north);
 				break;
 
 			case engine.keyboard.getValue('down'):
 				engine.player.move('down');
+				south = 2;
+				engine.storyteller(south);
 			    break;
 
 			case engine.keyboard.getValue('left'):
 				engine.player.move('left');
+				west = 3;
+				engine.storyteller(west);
 				break;
 
 			case engine.keyboard.getValue('right'):
 				engine.player.move('right');
+				east = 4;
+				engine.storyteller(east);
 				break;
 
 			case engine.keyboard.getValue('atack'):
@@ -68,18 +78,9 @@ engine.keyboard.parseInput = function(event)
 			    
 //INTRODUCCION }**********
 			    engine.repro1.innerHTML = '<audio autoplay controls> <source src = "test.mp3"> </audio>';
-			    activar = 1;
+			    activar = 8;
 
-			    setTimeout(
-			    	function()
-			    	{  
-			    	   if (activar == 1) 
-			    	   {
-
-	//NARRACION CAP. 1 ************
-			 			   engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Narracion1.mp3"> </audio>';
-			    	   }
-			    	},10000);
+			   engine.storyteller(activar);
 			    
 
 				break;

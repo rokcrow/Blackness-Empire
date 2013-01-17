@@ -86,7 +86,7 @@ function()
 }
 
 /***** 
-NOMBRE: soundefecto 
+NOMBRE: soundback 
 DESCRIPCIÓN: permite reproducir musica de fondo
 *****/
 engine.soundsback = function(topo)
@@ -109,10 +109,71 @@ engine.storyteller = function(caiman)
 {
 	switch(caiman)
 	{
-		case 1:
-		engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/music2.mp3"> </audio>';
+		//DIRECCIONES
+			case 1:
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			break;//NORTE
+
+			case 2:
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			break;//SUR
+
+			case 3:
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			break;//OESTE
+
+			case 4:
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			break;//ESTE
+
+//APARECE ENEMIGO
+		case 5:
+		
+			var cactus;
+			setTimeout(
+				function()
+				{//HABLA UI> 
+					cactus = 1
+					engine.repro1.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
+				
+					if(cactus == 1)
+					{
+						setTimeout(
+						function()
+						{ //ENEMIGO SALVAJE HA APARECIDO
+							gato = 1;
+							engine.repro1.innerHTML = '<audio autoplay> <source src = "test1.mp3"> </audio>';
+							
+							if (gato == 1)
+							{
+								//ENEMY STAT
+							  engine.repro1.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
+							}
+
+						},10000);
+					}
+				},1000);
 		break;
-	}
+
+
+		case 6: 
+		engine.repro1.innerHTML = '<audio autoplay> <source src = "test1.mp3"> </audio>';
+			break;//ATACAS
+
+		case 7:
+		engine.repro1.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
+				 
+		  setTimeout(function()
+		{
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+		},10000);
+
+			break;//EL ENEMY TIENE /X PUNTOS DE VIDA
+
+		case 8:
+		engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Narracion1.mp3"> </audio>';
+		break;
+		}
 };
 
 
