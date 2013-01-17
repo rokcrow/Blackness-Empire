@@ -6,11 +6,14 @@ engine.player.spriteIndex = 6;
 
 engine.player.leftLeg = false;
 
-var yourlife = 100;
-var yourpower = 100;
-var playerexp = 0;
+//var yourlife = 100;
+//var yourpower = 100;
+//var playerexp = 0; 
 
-
+/***** 
+NOMBRE: player.store 
+DESCRIPCIÓN: permite almacenar imagenes del personaje
+*****/
 engine.player.store = function(index, imgSrc)
 {
 	var sprite = [new Image(), false];
@@ -24,13 +27,19 @@ engine.player.store = function(index, imgSrc)
 	engine.player.sprite[index] = sprite;
 };
 
-
+/***** 
+NOMBRE: player.retrieve
+DESCRIPCIÓN: permite devolver la imagen del personaje que se está utilizando
+*****/
 engine.player.retrieve = function(index)
 {
 	return engine.player.sprite[index][0];
 };
 
- 
+ /***** 
+NOMBRE: player.allLoaded
+DESCRIPCIÓN: permite corroborar si están todas las imágenes cargadas.
+*****/
 engine.player.allLoaded = function()
 {
 	var i;
@@ -47,7 +56,10 @@ engine.player.allLoaded = function()
 };
 
 
-
+/***** 
+NOMBRE: player.calcLoc
+DESCRIPCIÓN: permite definir la posición de la cámara en el mapa.
+*****/
 engine.player.calcLoc = function()
 {
 	var character = 
@@ -68,7 +80,10 @@ engine.player.calcLoc = function()
 	return {left: x, top: y};
 };
 
-
+/***** 
+NOMBRE: player.draw
+DESCRIPCIÓN: permite dibujar al personaje
+*****/
 engine.player.draw = function()
 {
 	var loc = engine.player.calcLoc();
@@ -76,7 +91,10 @@ engine.player.draw = function()
 	engine.handle.drawImage(engine.player.sprite[engine.player.spriteIndex][0], loc.left, loc.top);
 };
 
-
+/***** 
+NOMBRE: player.move
+DESCRIPCIÓN: permite mover al personaje.
+*****/
 engine.player.move = function(direction)
 {
 	var index, x, y;
@@ -122,6 +140,10 @@ engine.player.move = function(direction)
 
 };
 
+/***** 
+NOMBRE: player.animate 
+DESCRIPCIÓN: permite animar al personaje si se quisiera activar el modo gráfico
+*****/
 engine.player.animate = function()
 {
 	var x, y
@@ -146,7 +168,10 @@ engine.player.animate = function()
 	engine.draw();
 };
 
-
+/***** 
+NOMBRE: player.reset
+DESCRIPCIÓN: permite reiniciar el personaje una y otra vez para cargar las imagenes correctass.
+*****/
 engine.player.reset = function()
 {
 	var index, x, y;
@@ -194,6 +219,10 @@ engine.player.reset = function()
 	}
 };
 
+/***** 
+NOMBRE:player.activate 
+DESCRIPCIÓN: permite iniciar activar situaciones disparadas por los eventos.
+*****/
 engine.player.activate = function()
 {
 	var x = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5);
@@ -213,6 +242,32 @@ engine.player.activate = function()
 	   engine.currentMap[y][x].onactivate != undefined)
 	{
 		engine.script.call[engine.currentMap[y][x].onactivate]();
+	}
+};
+
+/***** 
+NOMBRE: player.heal
+DESCRIPCIÓN: permite curar al personaje.
+*****/
+engine.player.heal = function()
+{
+	var x = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5);
+	var y = engine.viewport.y + (engine.screen.tilesY / 2 - 0.5);
+
+	switch(engine.player.spriteIndex)
+	{
+		case 0: y--; break;
+		case 3: x++; break;
+		case 6: y++; break;
+		case 9: x--; break;
+	}	
+	
+
+	if(engine.currentMap[y] &&
+	   engine.currentMap[y][x] &&
+	   engine.currentMap[y][x].onheal != undefined)
+	{
+		engine.script.call[engine.currentMap[y][x].onheal]();
 	}
 };
 

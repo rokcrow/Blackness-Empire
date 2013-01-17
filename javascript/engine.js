@@ -1,5 +1,6 @@
 
 var engine = {};
+var opcion;
 
 engine.repro1 = document.getElementById('repro1');
 engine.repro2 = document.getElementById('repro2');
@@ -7,33 +8,134 @@ engine.canvas = document.getElementById('canvas');
 engine.handle = engine.canvas.getContext('2d');
 
 //AQUI SE REPRODUCEN TODOS LOS SONIDOS....
-engine.efecto = function(topo)
+
+/***** 
+NOMBRE: Menu 
+DESCRIPCIÓN: permite reproducir los sonidos del menu
+*****/
+
+engine.menu = function()
+{
+
+
+//INTRO
+engine.repro1.innerHTML = '<audio autoplay> <source src ="Sounds/bienvenida/bienvenida.mp3"></audio>';
+
+
+setTimeout(
+function()
+{
+	opcion = 2;
+	engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion1.mp3"> </audio>';
+    
+	if(opcion == 2)
+	{
+		setTimeout(
+		function()
+		{
+			opcion = 3
+			engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion2recuperar.mp3"> </audio>';
+
+			if(opcion == 3)
+			{
+				setTimeout(
+				function()
+				{
+					opcion = 4
+					engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion3instrucciones.mp3"> </audio>';
+				
+						if(opcion == 4)
+						{
+							setTimeout(
+							function()
+							{
+								opcion = 5
+								engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion4creditos.mp3"> </audio>';
+							
+
+									if(opcion == 5)
+									{
+										setTimeout(
+										function()
+										{ opcion =5;
+	 									engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion5salir.mp3"> </audio>';
+										},3000);
+									}
+
+							},3000);
+						}
+				},4000);
+			}
+		},3000);
+	}
+
+},3000);
+
+
+
+
+	switch(event.keyCode)
+		{
+			case 32:
+			alert("ffsd");
+				break;
+
+			
+		} 
+
+}
+
+/***** 
+NOMBRE: soundefecto 
+DESCRIPCIÓN: permite reproducir musica de fondo
+*****/
+engine.soundsback = function(topo)
 { 
 	switch(topo) 
 	{
 		case 1: 	
-		 	//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
+		 	engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/Narracion1.mp3"> </audio>';
 			break;
 		case 2:
-			//engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArena.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay controls> <source src = "Sounds/CaminarArena.mp3"> </audio>';
 			break;				
 	}	
 };
-
-engine.fondo = function(caiman)
+/***** 
+NOMBRE: storyteller
+DESCRIPCIÓN: permite reproducir narraciones
+*****/
+engine.storyteller = function(caiman)
 {
 	switch(caiman)
 	{
 		case 1:
-		//engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
+		engine.repro1.innerHTML = '<audio autoplay> <source src = "Sounds/music2.mp3"> </audio>';
 		break;
 	}
 };
 
 
+/***** 
+NOMBRE: efects
+DESCRIPCIÓN: permite reproducir efectos de sonido
+*****/
+engine.efects = function(caiman)
+{
+	switch(caiman)
+	{
+		case 1:
+		engine.repro1.innerHTML = '<audio autoplay controls> <source src = "Sounds/music2.mp3"> </audio>';
+		break;
+	}
+};
+
 //HASTA AQUI...
 
-
+/***** 
+NOMBRE: draw 
+DESCRIPCIÓN: permite dibujar en el canvas
+*****/
 
 engine.draw = function()
 {
@@ -49,7 +151,10 @@ engine.draw = function()
 	}
 };
 
-
+/***** 
+NOMBRE: currentMap 
+DESCRIPCIÓN: permite definir el mapa que se utiliza
+*****/
 engine.currentMap = null;
 
 engine.setMap = function(mapData)
@@ -58,7 +163,10 @@ engine.setMap = function(mapData)
 };
 
 
-
+/***** 
+NOMBRE: start
+DESCRIPCIÓN: permite iniciar el motor de trabajo del juego
+*****/
 engine.start = function(mapData, x, y, tucan)
 {
 	
@@ -96,10 +204,15 @@ engine.start = function(mapData, x, y, tucan)
 	engine.player.store(10, 'imagenes/scientist_w1.png');
 	engine.player.store(11, 'imagenes/scientist_w2.png');
 
-	engine.draw();
+	if(opcion == 5)
+	{
+			engine.draw();
 
-	engine.efecto(1);
+	}
+
+	//engine.efecto(1);
 
 	engine.keyboard.canInput = true;
 
 };
+

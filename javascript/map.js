@@ -1,9 +1,13 @@
 engine.map = {};
 
+/***** 
+NOMBRE:map.draw 
+DESCRIPCIÓN: permite dibujar el mapa
+*****/
 engine.map.draw = function()
 {
 	var i, j, tile; 
-
+ 
 	var mapX = 0;
 	var mapY = 0;
 	

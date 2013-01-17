@@ -1,9 +1,14 @@
-$(document).on('ready', function(){
-	$(document).keydown(function(event){
+var engine = {};
+var opcion =1;
 
-		if (event.keyCode == 49) 
-			{
-				window.open('game.html','_self');
-			}
-	});
-});
+engine.menu = document.getElementById('menu');
+
+engine.menu.innerHTML = '<audio autoplay> <source src ="Sounds/bienvenida/bienvenida.mp3"></audio>';
+
+engine.menu.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion1.mp3"> </audio>';
+
+switch(opcion)
+{
+	case 1: alert("hola");
+	break;
+}

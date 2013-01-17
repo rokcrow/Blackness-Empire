@@ -1,5 +1,8 @@
 engine.tile = {};
-
+/***** 
+NOMBRE:tile.draw 
+DESCRIPCIÓN: permite dibujar el mapa mosaico a mosaico
+*****/
 engine.tile.draw = function(x, y, tile)
 {
 	var rx = x * 16 + engine.viewport.playerOffsetX;
@@ -11,11 +14,14 @@ engine.tile.draw = function(x, y, tile)
 	if(tile.item)
 	{
 		engine.handle.drawImage(engine.tile.retrieve(tile.item), x * 16, y * 16);
-	}
+	} 
 };
 
 engine.tile.images = [];
-
+/***** 
+NOMBRE:tile.store 
+DESCRIPCIÓN: permite almacenar las imagenes utilizadas dentro del mapa.
+*****/
 engine.tile.store = function(id, imgSrc)
 {
 	var newid = engine.tile.images.length;
@@ -30,6 +36,10 @@ engine.tile.store = function(id, imgSrc)
 	engine.tile.images[newid] = tile;
 };
 
+/***** 
+NOMBRE:tile.retrieve 
+DESCRIPCIÓN: permite devolver las imagenes del mapa para cargarlas en un loop.
+*****/
 engine.tile.retrieve = function(id)
 {
 	var i, len = engine.tile.images.length;
@@ -43,6 +53,10 @@ engine.tile.retrieve = function(id)
 	}
 };
 
+/***** 
+NOMBRE: tile.allLoaded
+DESCRIPCIÓN: permite determinar si todas las imágenes del mapa están cargadas.
+*****/
 engine.tile.allLoaded = function()
 {
 	var i, len = engine.tile.images.length;

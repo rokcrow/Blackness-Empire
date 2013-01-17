@@ -1,13 +1,8 @@
  
-var tucan;
 
-
-tucan = 0;   
-
-
-var mapone =
+var mapone =//DESIERTO
 [ 
-   [    //DESIERTO
+   [    
     {ground:1, item:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}, 
@@ -150,16 +145,16 @@ var mapone =
    ],
    [
     {ground:1, item:2}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
-    {ground:1, onenter:tucan}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
+    {ground:1, onenter:0}, 
     {ground:1, item:2}
    ],
    [
@@ -199,14 +194,14 @@ var mapone =
     {ground:1, item:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}, 
-    {ground:1, onenter:2}, 
+    {ground:1, item:2}, 
     {ground:1, onenter:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}
    ]
 ];
-//Zona de Combate
-var maptwo =
+
+var maptwo = //WARZONE
 [
    [
     {ground:5, item:2},
@@ -238,9 +233,9 @@ var maptwo =
    ]
 ];
 
-var mapthree =
+var mapthree =//MONOCEROTIS
 [
-   [    //MONOCEROTIS
+   [    
     {ground:1, item:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}, 
@@ -299,7 +294,7 @@ var mapthree =
    ],
    [
     {ground:1, item:2}, 
-    {ground:1, item:3, onenter:8},//npc que habla 
+    {ground:1, item:3, onenter:8},//ENTRADA A LA MULTITUD 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -404,7 +399,7 @@ var mapthree =
     {ground:1},   
     {ground:1}, 
     {ground:1}, 
-    {ground:1}, 
+    {ground:1, item:6, onheal:12}, //HEALING
     {ground:1}, 
     {ground:1}, 
     {ground:1, item:2}
@@ -434,13 +429,13 @@ var mapthree =
     {ground:1, item:2}, 
     {ground:1, item:2}, 
     {ground:1, item:2}, 
-    {ground:1, item:2}, 
+    {ground:1, onenter:17}, 
     {ground:1, item:2}
    ]
 ];
 
-//Iglesia
-var mapfour =
+
+var mapfour =//CATEDRAL
 [
    [
     {ground:5, item:2},
@@ -544,8 +539,7 @@ var mapfour =
    ]
 ];
 
-//Sotano
-var mapfive =
+var mapfive =//SOTANO
 [
    [
     {ground:5, item:2},
@@ -570,7 +564,7 @@ var mapfive =
     {ground:5}, 
     {ground:5}, 
     {ground:5},
-    {ground:5},
+    {ground:5, item:6, onheal:12}, //HEALING
     {ground:5, item:2}
    ],
    [
@@ -653,15 +647,15 @@ var mapfive =
    ],
    [
     {ground:5, item:2}, 
-    {ground:1, onenter:50}, //envia a zona de combate
-    {ground:1, onenter:50}, //envia a zona de combate
-    {ground:1, onenter:50}, //envia a zona de combate
-    {ground:3, onenter:60}, //envia a zona de combate
-    {ground:3, onenter:60},//envia a zona de combate
-    {ground:3, onenter:60},//envia a zona de combate
-    {ground:6, onenter:70}, //envia a zona de combate
-    {ground:6, onenter:70},//envia a zona de combate
-    {ground:6, onenter:70}, //envia a zona de combate
+    {ground:5, item:3, onenter:13}, //cofre 1
+    {ground:5},
+    {ground:5}, 
+    {ground:5}, 
+    {ground:5, item:3, onenter:14},//cofre 2
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5, item:3, onenter:15}, //cofre 3
     {ground:5, item:2}
    ],
    [
@@ -679,7 +673,7 @@ var mapfive =
    ]
 ];
 
-var mapsix = //Mercado
+var mapsix = //MERCADO
 [
    [
     {ground:5, item:2},
@@ -823,7 +817,7 @@ var mapsix = //Mercado
    ]
 ];
 
-var mapseven =  //Multitud
+var mapseven =  //MULTITUD
 [
    [
     {ground:5, item:2},
@@ -912,6 +906,170 @@ var mapseven =  //Multitud
     {ground:5},
     {ground:5}, 
     {ground:5},
+    {ground:5, item:7, onactivate:16},//CANOPUS 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},   
+    {ground:5, item:2}
+   ]
+];
+
+var mapeight =  //FORNAX
+[
+   [
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, item:2},   
+    {ground:5, item:2},
+    {ground:5, item:2},
+    {ground:5, onenter:2},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5}, 
+    {ground:5},
+    {ground:5}, 
+    {ground:5, item:2}
+   ],
+   [
+    {ground:5, item:2}, 
+    {ground:5}, 
+    {ground:5},
+    {ground:5},
+    {ground:5, item:3, onenter:18}, 
+    {ground:5},
     {ground:5}, 
     {ground:5, item:2}
    ],
@@ -922,10 +1080,16 @@ var mapseven =  //Multitud
     {ground:5, item:2},
     {ground:5, item:2},
     {ground:5, item:2},
-    {ground:5, item:2},  
+    {ground:5, item:2},   
     {ground:5, item:2}
    ]
 ];
+ 
+
+      window.addEventListener('load', function()
+      {
+        engine.menu();
+      }, false);
 
 	  window.addEventListener('load', function()
       {//Posicion Inicial del personaje en Mapaone
