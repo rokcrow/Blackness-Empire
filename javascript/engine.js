@@ -11,6 +11,8 @@ engine.handle = engine.canvas.getContext('2d');
 
 //AQUI SE REPRODUCEN TODOS LOS SONIDOS....
 
+
+
 /***** 
 NOMBRE: Menu 
 DESCRIPCIÓN: permite reproducir los sonidos del menu
@@ -19,18 +21,17 @@ DESCRIPCIÓN: permite reproducir los sonidos del menu
 engine.menu = function()
 {
 //MUSICA DE FONDO
-//engine.repro1.innerHTML = '<audio autoplay> <source src ="test1.mp3"></audio>';
-
+engine.soundsback(2);
 
 //BIENVENIDA
-engine.repro2.innerHTML = '<audio autoplay> <source src ="Sounds/bienvenida/bienvenida.mp3"></audio>';
+engine.repro2.innerHTML = '<audio autoplay> <source src ="audio/narraciones/bienvenida.mp3"></audio>';
 
 //MENU
 setTimeout(
 function()
 {
 	opcion = 2;
-	engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion1.mp3"> </audio>';
+	engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/menu/opcion1.mp3"> </audio>';
     
 	if(opcion == 2)
 	{
@@ -38,7 +39,7 @@ function()
 		function()
 		{
 			opcion = 3
-			engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion2recuperar.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/menu/opcion2recuperar.mp3"> </audio>';
 
 			if(opcion == 3)
 			{
@@ -46,7 +47,7 @@ function()
 				function()
 				{
 					opcion = 4
-					engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion3instrucciones.mp3"> </audio>';
+					engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/menu/opcion3instrucciones.mp3"> </audio>';
 				
 						if(opcion == 4)
 						{
@@ -54,7 +55,7 @@ function()
 							function()
 							{
 								opcion = 5
-								engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion4creditos.mp3"> </audio>';
+								engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/menu/opcion4creditos.mp3"> </audio>';
 							
 
 									if(opcion == 5)
@@ -62,7 +63,7 @@ function()
 										setTimeout(
 										function()
 										{ opcion =5;
-	 									engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Menu/opcion5salir.mp3"> </audio>';
+	 									engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/menu/opcion5salir.mp3"> </audio>';
 										},3000);
 									}
 
@@ -87,10 +88,10 @@ engine.soundsback = function(topo)
 	switch(topo) 
 	{
 		case 1: 	
-		 	engine.repro1.innerHTML = '<audio autoplay controls> <source src = "test1.mp3"> </audio>';
+			engine.repro1.innerHTML = '<audio autoplay loop> <source src ="audio/musica/musicintro2.mp3"></audio>';
 			break;
 		case 2:
-			engine.repro1.innerHTML = '<audio autoplay controls> <source src = "test2.mp3"> </audio>';
+			engine.repro1.innerHTML = '<audio autoplay loop> <source src ="audio/musica/musicintro3.mp3"></audio>';
 			break;				
 	}	
 };
@@ -104,48 +105,43 @@ engine.storyteller = function(caiman)
 	{
 		//DIRECCIONES
 			case 1:
-			engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/efectos/caminarena.mp3"> </audio>';
 			break;//NORTE
 
 			case 2:
-			engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/efectos/caminarena.mp3"> </audio>';
 			break;//SUR
 
 			case 3:
-			engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/efectos/caminarena.mp3"> </audio>';
 			break;//OESTE
 
 			case 4:
-			engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/efectos/caminarena.mp3"> </audio>';
 			break;//ESTE
 
 //APARECE ENEMIGO
 		case 5:
 		
 			var cactus;
-			setTimeout(
-				function()
-				{//ENEMIGO SALVAJE HA APARECIDO...> 
-					cactus = 1
-					engine.repro2.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
+			cactus = 1
+//ENEMIGO SALVAJE HA APARECIDO...> 
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/combate/enemigosalvajeaparecido.mp3"> </audio>';
 				
-					if(cactus == 1)
-					{
-						setTimeout(
-						function()
-						{ //ENEMY HABLA
-							gato = 1;
-							engine.repro2.innerHTML = '<audio autoplay> <source src = "test1.mp3"> </audio>';
-							
-							if (gato == 1)
-							{
-								//COMBATE INICIADO
-							  engine.repro2.innerHTML = '<audio autoplay> <source src = "test2.mp3"> </audio>';
-							}
 
-						},10000);
-					}
-				},1000);
+			//ENEMY HABLA
+			setTimeout(function()
+			{
+				engine.ayuda(1);
+			
+				//COMBATE INICIADO
+				setTimeout(function()
+				{
+					engine.ayuda(2);
+				},4000);
+
+			},4000);
+
 		break;
 
 //ZONA DE GUERRA
@@ -164,13 +160,22 @@ engine.storyteller = function(caiman)
 				break;//EL ENEMY TIENE /X PUNTOS DE VIDA
 
 		case 8://INTRODUCCION
-		engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Narracion1.mp3"> </audio>';
+		engine.repro2.innerHTML = '<audio autoplay > <source src = "audio/narraciones/capitulo1/intro.mp3"> </audio>';
 		
 		//NARRACION 1 CAP1
 		 setTimeout(function()
-				{
-		engine.repro2.innerHTML = '<audio autoplay> <source src = "Sounds/Narracion1.mp3"> </audio>';
-				},10000);
+		 {
+			engine.repro2.innerHTML = '<audio autoplay > <source src = "audio/narraciones/capitulo1/narracion1.mp3"> </audio>';
+					
+			
+			
+		},180000);
+
+		 setTimeout(function()
+		 {
+		 	engine.efects(2);
+		 },180000);
+
 
 		break;
 		
@@ -236,12 +241,28 @@ engine.efects = function(caiman)
 		engine.repro3.innerHTML = '<audio autoplay > <source src = "test2.mp3"> </audio>';
 		break;
 
-		case 2:
-		engine.repro3.innerHTML = '<audio autoplay > <source src = "test1.mp3"> </audio>';
+		case 2://viento excepcion
+		engine.repro1.innerHTML = '<audio autoplay loop> <source src = "audio/efectos/vientosopla.mp3"> </audio>';
 		break;
 	}
 };
 
+
+engine.ayuda = function(help)
+{
+	switch(help)
+	{
+		case 1:
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/combate/hablaenemigo.mp3"> </audio>';
+
+		break;
+
+		case 2:
+			engine.repro2.innerHTML = '<audio autoplay> <source src = "audio/narraciones/combate/combateiniciado.mp3"> </audio>';
+
+		break;
+	}
+}
 //HASTA AQUI...
 
 /***** 

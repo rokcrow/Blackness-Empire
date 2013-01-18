@@ -31,6 +31,7 @@ engine.script.call[0] = function()
 
 		engine.draw(); 
 
+		engine.soundsback(1);
 		//ENEMIGO SALVAJE HA APARECIDO	
 		caiman = 5;
 		engine.storyteller(caiman);
@@ -86,6 +87,8 @@ engine.script.call[2] = function()
 		engine.player.spriteIndex = 6;
 
 		engine.draw();
+
+		engine.efects()
 	}
 
 	if(monocerotis > 0)
