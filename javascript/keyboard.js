@@ -7,6 +7,7 @@ var topo = 2;
 var activar;
 var north, south, east, west;
 var ataca;
+var fondo;
 /***** 
 NOMBRE: getValue
 DESCRIPCIÓN: permite obtener un valor ingresado por teclado
@@ -77,7 +78,7 @@ engine.keyboard.parseInput = function(event)
 				//alert("jugar");
 			    
 //INTRODUCCION }**********
-			    engine.repro1.innerHTML = '<audio autoplay controls> <source src = "test.mp3"> </audio>';
+			    engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
 			    activar = 8;
 
 			   engine.storyteller(activar);

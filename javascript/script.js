@@ -60,7 +60,7 @@ engine.script.call[0] = function()
 
 /***** 
 NOMBRE: call[1]
-DESCRIPCIÓN: evento que se dispara a enfrentar a algún enemigo
+DESCRIPCIÓN: evento que se dispara al enfrentar a algún enemigo
 *****/
 
 engine.script.call[1] = function()
@@ -396,4 +396,13 @@ DESCRIPCIÓN: evento que se permite luchar contra el enemigo del Templo de Forna
 		engine.start(maptwo, -2, -3);
 
 		monocerotis = 1;
+	};
+
+/***** 
+NOMBRE: call[19]
+DESCRIPCIÓN: evento que se permite advertir al usuario que se acerca a la iglesia.
+*****/
+engine.script.call[18] = function()//ENEMIGO EN FORNAX
+	{
+		
 	};
