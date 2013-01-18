@@ -3,22 +3,22 @@
 var mapone =//DESIERTO
 [ 
    [    
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}
    ],
    
    [ 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -29,10 +29,10 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -43,24 +43,24 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -71,38 +71,38 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1}, 
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -111,12 +111,12 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -127,10 +127,10 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, //item:4, onenter:0}, 
     {ground:1}, 
@@ -141,10 +141,10 @@ var mapone =//DESIERTO
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
@@ -155,49 +155,49 @@ var mapone =//DESIERTO
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, onenter:20}, 
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1, onenter:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}
    ]
 ];
 
@@ -236,22 +236,22 @@ var maptwo = //WARZONE
 var mapthree =//MONOCEROTIS
 [
    [    
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1, item:6, onactivate:5}, 
     {ground:1, item:6, onactivate:5}, 
     {ground:1, item:6, onactivate:5}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}
    ],
    
    [ 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -262,10 +262,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -276,10 +276,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -290,10 +290,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1, item:3, onenter:8},//ENTRADA A LA MULTITUD 
     {ground:1}, 
     {ground:1}, 
@@ -304,10 +304,10 @@ var mapthree =//MONOCEROTIS
     {ground:1},  
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -318,10 +318,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -332,10 +332,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -346,10 +346,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -360,10 +360,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1},
     {ground:1}, 
@@ -374,10 +374,10 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -388,10 +388,10 @@ var mapthree =//MONOCEROTIS
     {ground:1},
     {ground:1},
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
@@ -399,13 +399,13 @@ var mapthree =//MONOCEROTIS
     {ground:1},   
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:6, onheal:12}, //HEALING
+    {ground:1, item:6, onheal:12, onmove:21}, //HEALING
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:3, onenter:7}, 
     {ground:1}, 
     {ground:1}, 
@@ -416,21 +416,21 @@ var mapthree =//MONOCEROTIS
     {ground:1}, 
     {ground:1}, 
     {ground:1}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
-    {ground:1, item:2}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, 
     {ground:1, onenter:17}, 
-    {ground:1, item:2}
+    {ground:1, item:2, onmove:21}
    ]
 ];
 
@@ -438,104 +438,104 @@ var mapthree =//MONOCEROTIS
 var mapfour =//CATEDRAL
 [
    [
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},   
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},   
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21, onmove:21},
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:1, onenter:4}, 
     {ground:1, onenter:4},
     {ground:1, onenter:4},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:1, onenter:4}, 
     {ground:1, onenter:4},
     {ground:1, onenter:4},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2}, 
+    {ground:5, item:2, onmove:21}, 
     {ground:5}, 
     {ground:5},
     {ground:5},
     {ground:5}, 
     {ground:5},
     {ground:5}, 
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21}
    ],
    [
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},
-    {ground:5, item:2},  
-    {ground:5, item:2}
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},
+    {ground:5, item:2, onmove:21},  
+    {ground:5, item:2, onmove:21}
    ]
 ];
 

@@ -43,24 +43,28 @@ engine.keyboard.parseInput = function(event)
 		{
 			case engine.keyboard.getValue('up'):
 				engine.player.move('up');
+				engine.player.against();
 				north = 1;
 				engine.storyteller(north);
 				break;
 
 			case engine.keyboard.getValue('down'):
 				engine.player.move('down');
+				engine.player.against();
 				south = 2;
 				engine.storyteller(south);
 			    break;
 
 			case engine.keyboard.getValue('left'):
 				engine.player.move('left');
+				engine.player.against();
 				west = 3;
 				engine.storyteller(west);
 				break;
 
 			case engine.keyboard.getValue('right'):
 				engine.player.move('right');
+				engine.player.against();
 				east = 4;
 				engine.storyteller(east);
 				break;
@@ -78,7 +82,7 @@ engine.keyboard.parseInput = function(event)
 				//alert("jugar");
 			    
 //INTRODUCCION }**********
-			    engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
+			    //engine.repro2.innerHTML = '<audio autoplay> <source src = "test.mp3"> </audio>';
 			    activar = 8;
 
 			   engine.storyteller(activar);

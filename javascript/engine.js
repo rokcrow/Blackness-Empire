@@ -19,7 +19,7 @@ DESCRIPCIÓN: permite reproducir los sonidos del menu
 engine.menu = function()
 {
 //MUSICA DE FONDO
-engine.repro1.innerHTML = '<audio autoplay> <source src ="test1.mp3"></audio>';
+//engine.repro1.innerHTML = '<audio autoplay> <source src ="test1.mp3"></audio>';
 
 
 //BIENVENIDA
@@ -232,12 +232,12 @@ engine.efects = function(caiman)
 {
 	switch(caiman)
 	{
-		case 1:
-		engine.repro3.innerHTML = '<audio autoplay > <source src = "test1.mp3"> </audio>';
+		case 1://CUANDO SE ACERCA A LA IGLESIA SE EMITE ESTO
+		engine.repro3.innerHTML = '<audio autoplay > <source src = "test2.mp3"> </audio>';
 		break;
 
 		case 2:
-		engine.repro3.innerHTML = '<audio autoplay > <source src = "test2.mp3"> </audio>';
+		engine.repro3.innerHTML = '<audio autoplay > <source src = "test1.mp3"> </audio>';
 		break;
 	}
 };

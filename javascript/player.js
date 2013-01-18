@@ -271,3 +271,29 @@ engine.player.heal = function()
 	}
 };
 
+
+/***** 
+NOMBRE: player.against
+DESCRIPCIÓN: permite indicar cuando se golpea contra una roca.
+*****/
+engine.player.against = function()
+{
+	var x = engine.viewport.x + (engine.screen.tilesX / 2 - 0.5);
+	var y = engine.viewport.y + (engine.screen.tilesY / 2 - 0.5);
+
+	switch(engine.player.spriteIndex)
+	{
+		case 0: y--; break;
+		case 3: x++; break;
+		case 6: y++; break;
+		case 9: x--; break;
+	}	
+	
+
+	if(engine.currentMap[y] &&
+	   engine.currentMap[y][x] &&
+	   engine.currentMap[y][x].onmove != undefined)
+	{
+		engine.script.call[engine.currentMap[y][x].onmove]();
+	}
+};

@@ -402,7 +402,21 @@ DESCRIPCIÓN: evento que se permite luchar contra el enemigo del Templo de Forna
 NOMBRE: call[19]
 DESCRIPCIÓN: evento que se permite advertir al usuario que se acerca a la iglesia.
 *****/
-engine.script.call[18] = function()//ENEMIGO EN FORNAX
-	{
-		
-	};
+engine.script.call[19] = function()//cerca de catedral
+{  var tilapia = 1
+	engine.efects(tilapia);
+};
+
+/***** 
+NOMBRE: call[19]
+DESCRIPCIÓN: evento que se permite advertir al usuario que se acerca a la iglesia.
+*****/
+engine.script.call[20] = function()//reloj
+{  var tilapia = 2
+	engine.efects(tilapia);
+};
+
+engine.script.call[21] = function()//contra las rocas
+{  var tilapia = 2
+	engine.efects(tilapia);
+};
