@@ -72,6 +72,7 @@ engine.keyboard.parseInput = function(event)
 			case engine.keyboard.getValue('atack'):
 
 				engine.player.activate();
+				engine.efects(3);
 				break;
 
 			case engine.keyboard.getValue('heal'):
@@ -95,15 +96,15 @@ engine.keyboard.parseInput = function(event)
 				break;
 
 			case engine.keyboard.getValue('instrucciones'):
-				alert("instrucciones");
+			engine.instrucciones();
 				break;
 
 			case engine.keyboard.getValue('creditos'):
-				alert("creditos");
+				engine.creditos();
 				break;
 
 			case engine.keyboard.getValue('salir'):
-				alert("salir");
+				alert("ADIOS");
 				break;
 		} 
 

@@ -23,7 +23,13 @@ div#output
 
 body 
 {
-	background-color: black;
-	color: white;
+	background-image: url('blackness.jpg');
+	background-size: 800px 600px;
+	color: black;
 	font-size: 11px;
+}
+
+h1
+{
+	color:white;
 }

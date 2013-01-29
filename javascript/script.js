@@ -420,6 +420,6 @@ engine.script.call[20] = function()//reloj
 };
 
 engine.script.call[21] = function()//contra las rocas
-{  var tilapia = 2
+{  var tilapia = 4
 	engine.efects(tilapia);
 };

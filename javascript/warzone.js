@@ -1,16 +1,16 @@
 engine.warzone = {};
 
-var userlife   = 100;
-var userpower  = 100;
+var userlife   = 10;
+var userpower  = 10;
 
-var enemylife  = 100;
-var enemypower = 100;
+var enemylife  = 10;
+var enemypower = 10;
 
-var userdamage = 2; //Character Life Damage
-var userpowerattack = 3; //Character Power Attack
+var userdamage = 1; //Character Life Damage
+var userpowerattack = 1; //Character Power Attack
 
-var enemydamage = 10; //Enemy Life Damage
-var enemypowerattack = 5; //Enemy Power Attack
+var enemydamage = 1; //Enemy Life Damage
+var enemypowerattack = 1; //Enemy Power Attack
 
 var hitornot;
 var enemydeads = 0;
@@ -37,13 +37,13 @@ engine.warzone.stats = function(EUA, heal)
 	{//si heal es 1, significa que el personaje pidio healearse
 		case 1:
 		  
-		  if(userlife < 100)
+		  if(userlife < 10)
 		  {
 		  	/*lifecharge chequea cuanto es lo que falta 
 		  	para que la vida llegue a 100 y eso es
 		  	lo que healea*/
 		
-		  	lifecharge = 100 - userlife;
+		  	lifecharge = 10 - userlife;
 		
 		  	userlife = userlife + lifecharge;
 	    
@@ -65,12 +65,9 @@ engine.warzone.stats = function(EUA, heal)
 			 	if(hitornot == 1)
 			 	{
 			 		//HAS ATACADO
-			 	atacauser = 6;
-				engine.storyteller(atacauser);
+			 	//atacauser = 6;
+				//engine.storyteller(atacauser);
 
-				//EFECTO DE SONIDO ATAQUE
-				atacauser = 1;
-				engine.efects(atacauser);
 
 			 	 document.getElementById('estado').innerHTML =("Enemigo atacado");
 
@@ -78,13 +75,14 @@ engine.warzone.stats = function(EUA, heal)
 
 
 				//EL ENEMIGO AHORA TIENE X PUNTOS
-				  aux = 7;
+				  engine.storyteller(6)
 				  setTimeout(function()
 				{
-					engine.storyteller(aux);
+				   engine.ayuda(enemylife);
+
 			 	  document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");
 
-				},10000);
+				},2000);
 				  
 				  
 
@@ -92,13 +90,13 @@ engine.warzone.stats = function(EUA, heal)
 			  userpower = userpower - userpowerattack;//Se reduce userpowerattack
 	
 			  //AHORA TU TIENES X PUNTOS DE PODER
-			 	 caballo = 9;
-				  setTimeout(function()
+			 	 
+			/*	  setTimeout(function()
 				{
-					engine.storyteller(caballo);
+					engine.ayuda(userpower);
 
-				},10000);
-
+				},7000);
+			*/
 			 	  document.getElementById('player').innerHTML =("Vida: "+userlife+" %" + "\n\nEnergia: "+userpower+" %");
 			 	}
 			 	else
@@ -119,38 +117,35 @@ engine.warzone.stats = function(EUA, heal)
 			{
 			  if(hitornot == 1)
 			  {	
-
-			  //HAS SIDO ATACADO
-			  	atacaenemy = 11;
-				engine.storyteller(atacaenemy);
+			  	//HAS SIDO ATACADO
+			  	//atacaenemy = 11;
+				//engine.storyteller(atacaenemy);
 			    document.getElementById('estado').innerHTML =("PERSONAJE ATACADO");
   
 
-  				//EFECTO DE SONIDO ATAQUE
-				atacaenemy = 1;
-				engine.efects(atacaenemy);
+  				
 
 		 		userlife = userlife - userdamage;
 				
 
 				//HAS PERDIDO PUNTOS DE VIDA
-				oso = 12;
+				engine.storyteller(12);
  				setTimeout(function()
 				{
-					engine.storyteller(oso);
-
-				},10000);
+					engine.ayuda(userlife);
+				},2000);
 				document.getElementById('player').innerHTML =("Vida: "+userlife+" %" + "\n\nEnergia: "+userpower+" %");
 
 				//ENEMY STATS
 				enemypower = enemypower - enemypowerattack;
-				vaca = 13;
+				/*vaca = 13;
 			   setTimeout(function()
 				{
 					engine.storyteller(vaca);
 
-				},10000);
+				},10000);*/
 			  	document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");
+			  
 			  }
 
 			  else
@@ -173,6 +168,10 @@ engine.warzone.stats = function(EUA, heal)
 			bufalo = 15;
 		    engine.storyteller(bufalo);
 
+			setTimeout(function()
+			{
+				engine.storyteller(11);
+			},12000);
 	 		document.getElementById('estado').innerHTML =("Enemigo destruido");
 		    
 		    enemydeads++;
@@ -180,11 +179,17 @@ engine.warzone.stats = function(EUA, heal)
 	 		switch(enemydeads)
 	 		{
 	 			case 1:
+				    
+//NARRACION 2, CAP 1
+
+				
+					
+		  	 	engine.efects(2);
+
+
 				    setTimeout(function(){engine.start(mapone, 3, 3);}, 3000); //Envia al personaje a un nuevo mapa
 					
-					//NARRACION 2, CAP 1
-				lemur = 17;
-		  	 	engine.storyteller(lemur);
+
 
 				break;
 
@@ -222,8 +227,8 @@ engine.warzone.stats = function(EUA, heal)
 					break;
 			}
 
-		    enemylife = 100;
-		    enemypower = 100;
+		    enemylife = 10;
+		    enemypower = 10;
 	        document.getElementById('enemigo1').innerHTML =("Vida: "+enemylife+" %" + "\n\nEnergia: "+enemypower+" %");	
 	    }
 
@@ -231,11 +236,10 @@ engine.warzone.stats = function(EUA, heal)
 		{   
 
 			//HAS PERDIDO
-			ganso = 16;
-		    engine.storyteller(ganso);
+		    engine.storyteller(16);
 
 	 		document.getElementById('estado').innerHTML =("Has perdido");
-		    setTimeout(engine.start(mapone, 19, 10) ,3000); //Pierde, se va a otro lado...
+		    setTimeout(engine.start(mapone, -3, -3) ,3000); //Pierde, se va a otro lado...
 	    }
 };
 

@@ -144,7 +144,7 @@ var mapone =//DESIERTO
     {ground:1, item:2, onmove:21}
    ],
    [
-    {ground:1, item:2, onmove:21}, 
+    {ground:1, item:2, onmove:21}, //POR AQUI APARECEN LOS ENEMIES
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
     {ground:1, onenter:0}, 
